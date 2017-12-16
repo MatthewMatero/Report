@@ -1,0 +1,144 @@
+%
+% File naaclhlt2016.tex
+%
+
+\documentclass[11pt,letterpaper]{article}
+\usepackage{naaclhlt2016}
+\usepackage{times}
+\usepackage{latexsym}
+\usepackage{graphicx}
+
+\naaclfinalcopy % Uncomment this line for the final submission
+\def\naaclpaperid{***} %  Enter the naacl Paper ID here
+
+% To expand the titlebox for more authors, uncomment
+% below and set accordingly.
+% \addtolength\titlebox{.5in}    
+
+\newcommand\BibTeX{B{\sc ib}\TeX}
+
+
+\title{Analyzing and Preventing Poverty in America}
+
+% Author information can be set in various styles:
+% For several authors from the same institution:
+% \author{Author 1 \and ... \and Author n \\
+%         Address line \\ ... \\ Address line}
+% if the names do not fit well on one line use
+%         Author 1 \\ {\bf Author 2} \\ ... \\ {\bf Author n} \\
+\author{Matthew Matero \and Kiranmayi Kasarapu \and Dibyajyoti Pati \and Neha  Indraniya}
+\date{12-9-2017}
+
+\begin{document}
+
+\maketitle
+
+\begin{abstract}
+ With the advancement of computers and applications being able to work with larger sets of data, we are increasingly able to perform more complex analysis. We aim to try and build accurate predictive models of the poverty level across America. First we examine poverty levels through linear models and then compare to deep learning. As well as perform a clustering to compare job markets. 
+\end{abstract}
+
+\section{Introduction}
+
+Our problem arises from the need to accurately know the percentage of people living below the poverty line and how we can improve their lives. While there already exist a few variations on predicting poverty we believe they are not looking at the correct predictors and can improve upon them.
+
+To begin we are going to analyze our dataset using common linear models. With features selected from a mix of the world bank's world development indicators and the bureau of labor statistics, we believe we can not only compete with widely accepted poverty models but add insight into how we can improve them.
+
+We also believe that there is a possibility that using a deep learning recursive neural network may lead to a more precise estimation the nature of the data over time. Although we build this model more for exploratory purposes to see if there is any promise continuing NNs in this area.
+
+Lastly, we explore a clustering around job markets to see which industries seem to hold promise for growth and advancement. 
+ 
+The application of this work is to improve the lives of the many people still living in poverty. With an accurate prediction we can direct discussion around how we can pro-actively help reduce this number. Our clustering of job markets also aims to help direct people to how they can better their skill set to improve their economic standing. 
+
+\section{General Information}
+
+The UN's sustainable development goals include various measurements of world health, and prosperity\cite{UNSDG}. 
+These goals are related to not only the well-being of people by trying to amplify quality of life, freedom, and education but also improve the health of our planet. This is accomplished through tracking aquatic life, climate change, and advancements in renewable energy. 
+
+\subsection{Sustainable Development Goal}
+\label{ssec:sdg}
+Our focus is on goal \#1, which is to eradicate extreme poverty by 2030. Specifically one of our main focuses will be on goal 1.2. This aims to reduce the amount of people under the poverty line by 50 percent defined by their national definition. This is the reason we will be monitoring poverty rates with our predictive models. We want to firstly be able to build accurate models, then we can use them to see how close we are to reaching this goal if we continue on our current path. 
+
+\subsection{Background}
+\label{ssec:background}
+
+As previously mentioned we will be using a combination of linear models and neural networks.
+
+Our clustering approach will be using K-Means. To create clusters around industries
+
+We will be using a RNN. Due to having data over time we feel this may capture a good representation of the data.
+
+
+\subsection{Data}
+\label{ssec:Data}
+
+There were two core data repositories used to create our feature set. The main collection we worked with was compiled of many surveys from the bureau of labor statistics. We supplemented this with a version of the World Bank's World Development Indicators found on Kaggle.com. The total raw size of our available data is roughly 16GB. 
+
+Each survey in the labor statistic set varied from being of the size 10-50MB to a few hundred MB. We planned on originally using the more specific sets for state and county level data, but time constraints only allowed us to work on the national level.
+
+\section{Methods}
+
+\subsection{Data Processing}
+\label{ssec:dataproc}
+
+We worked with a handful of surveys from the labor stats collection to first build a feature set that included job openings, closings, gross job gain, gross job loss, industry, year, quarter, region, \# strikes/work stoppages and CPI. Data from the WDIs were then joined in to grab the average unemployment rate for men and woman across America. We had information from the years 2000 - 2007, spread across 4 quarters per year, giving a total of 512 observations at the national level. This data was also replicated at the state level for each of the 50 states, giving a total of roughly 25,000 observations across all states.
+
+The data files were processed using Python/PySpark running on a 3 machine cluster(4core/8gb ram), to assist with the quick loading and processing of the total data set. 
+
+\subsection{Linear Models}
+\label{ssec:lm}
+
+We used multiple linear regression to create a model for poverty prediction. 
+
+\subsection{Neural Network}
+\label{ssec:nn}
+
+\subsection{Clustering}
+\label{ssec:cluster}
+
+A standard form of K-means algorithm was used to group our data points. 
+
+
+\section{Results and Discussion}
+
+\subsection{Linear Models}
+\label{ssec:linearResults}
+We approached the problem by training a multiple linear regression model to try and predict poverty to the best of our abilities. Since our data spanned years 2000 - 2007 we compared against those values. 
+
+\begin{figure}[h]'
+	\includegraphics[width=\linewidth]{"./pictures/Mse_Score_Predictions"}
+\end{figure}
+
+The trained model was able to come very close to the actual label values for each year. We also ran analysis to see which features most highly correlated with the poverty rate. By representing the correlations visually it is easy to see which features are most correlated. 
+
+\begin{figure}[h]'
+	\includegraphics[width=\linewidth]{"./pictures/Correlation_With_Poverty"}
+\end{figure}
+
+\subsection{Neural Network}
+\label{ssec:nnResult}
+
+\subsection{Cluster}
+\label{ssec:clusterResult}
+
+\section{Conclusion}
+
+\section*{Acknowledgments}
+Distribution of work:
+\begin{itemize}
+	\item {Matt - Data Processing/Feature Generation}
+	\item {Kiran - Linear Modeling + Visualizations}
+	\item {Dibya - Neural Network + Visualizations}
+	\item {Neha - Kmeans Cluster}
+\end{itemize}
+
+Cluster Information:
+\begin{itemize}
+	\item{AWS Elastic Map Reduce Instance}
+	\item{3 M4.large instances(4Core,8Gb ram each)}
+\end{itemize}
+
+\bibliography{final_report_refs}
+\bibliographystyle{naaclhlt2016}
+
+
+\end{document}
