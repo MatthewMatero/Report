@@ -87,7 +87,25 @@ The data files were processed using Python/PySpark running on a 3 machine cluste
 \subsection{Linear Models}
 \label{ssec:lm}
 
-We used multiple linear regression to create a model for poverty prediction. 
+We used Linear Regression to create a model for poverty prediction. With the preprocessing of the data, we arrived at certain feature variables which affect the poverty rates. Some of the features are unemployment percenatges, consumer product index, job openings, gains and losses etc. We used the data to calculate the correlation among the features which is shown in figure \ref{fig:Correlation Matrix}
+
+\begin{figure}
+\centering
+\includegraphics[width=\linewidth]{"./pictures/Correlation_Matrix"}
+\caption{Correlation Matrix}
+\label{fig:Correlation Matrix}
+\end{figure}
+
+After analyzing the data carefully, we see that unemployement rate is highly and positively correlated to poverty and job openings and gains in employement are negatively correlated which is expected. The results are shown in figure \ref{fig:Feature Correlation}
+
+\begin{figure}
+\centering
+\includegraphics[width=\linewidth]{"./pictures/MaleVsFemaleUnemployment"}
+\caption{Comparision of Unemployement rates between men and women}
+\label{fig:MaleVsFemaleUnemployment}
+\end{figure}
+
+To train the model, we divided the dataset into training and testing data, and we repeated the process several number of times with differnt training and testing points, so that each data observation is used in the training process. We combined the results and took the average of the predictions. The results are shown in section 4.
 
 \subsection{Neural Network}
 \label{ssec:nn}
@@ -104,14 +122,16 @@ A standard form of K-means algorithm was used to group our data points.
 \label{ssec:linearResults}
 We approached the problem by training a multiple linear regression model to try and predict poverty to the best of our abilities. Since our data spanned years 2000 - 2007 we compared against those values. 
 
-\begin{figure}[h]'
+\begin{figure}[h]
 	\includegraphics[width=\linewidth]{"./pictures/Mse_Score_Predictions"}
 \end{figure}
 
 The trained model was able to come very close to the actual label values for each year. We also ran analysis to see which features most highly correlated with the poverty rate. By representing the correlations visually it is easy to see which features are most correlated. 
 
-\begin{figure}[h]'
+\begin{figure}[h]
 	\includegraphics[width=\linewidth]{"./pictures/Correlation_With_Poverty"}
+	\caption{Correlation of poverty with various features}
+    \label{fig:Feature Correlation}
 \end{figure}
 
 \subsection{Neural Network}
