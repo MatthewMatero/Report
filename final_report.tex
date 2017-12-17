@@ -87,7 +87,7 @@ The data files were processed using Python/PySpark running on a 3 machine cluste
 \subsection{Linear Models}
 \label{ssec:lm}
 
-We used Linear Regression to create a model for poverty prediction. With the preprocessing of the data, we arrived at certain feature variables which affect the poverty rates. Some of the features are unemployment percenatges, consumer product index, job openings, gains and losses etc. We used the data to calculate the correlation among the features which is shown in figure \ref{fig:Correlation Matrix}
+We used Linear Regression to create a model for poverty prediction. With the preprocessing of the data, we arrived at certain feature variables which affect the poverty rates. Some of the features are unemployment percentages, consumer product index, job openings, gains and losses etc. We used the data to calculate the correlation among the features which is shown in figure \ref{fig:Correlation Matrix}
 
 \begin{figure}
 \centering
@@ -96,16 +96,16 @@ We used Linear Regression to create a model for poverty prediction. With the pre
 \label{fig:Correlation Matrix}
 \end{figure}
 
-After analyzing the data carefully, we see that unemployement rate is highly and positively correlated to poverty and job openings and gains in employement are negatively correlated which is expected. The results are shown in figure \ref{fig:Feature Correlation}
+After analyzing the data carefully, we see that unemployment rate is highly and positively correlated to poverty and job openings and gains in employment are negatively correlated which is expected. The results are shown in figure \ref{fig:Feature Correlation}
 
 \begin{figure}
 \centering
 \includegraphics[width=\linewidth]{"./pictures/MaleVsFemaleUnemployment"}
-\caption{Comparision of Unemployement rates between men and women}
+\caption{Comparison of Unemployment rates between men and women}
 \label{fig:MaleVsFemaleUnemployment}
 \end{figure}
 
-To train the model, we divided the dataset into training and testing data, and we repeated the process several number of times with differnt training and testing points, so that each data observation is used in the training process. We combined the results and took the average of the predictions. The results are shown in section 4.
+To train the model, we divided the dataset into training and testing data, and we repeated the process several number of times with different training and testing points, so that each data observation is used in the training process. We combined the results and took the average of the predictions. The results are shown in section 4.
 
 \subsection{Neural Network}
 \label{ssec:nn}
@@ -113,7 +113,9 @@ To train the model, we divided the dataset into training and testing data, and w
 \subsection{Clustering}
 \label{ssec:cluster}
 
-A standard form of K-means algorithm was used to group our data points. 
+We analyzed the data from multiple perspectives to perform our clusterings. For all of them we used a K-means approach to create a predefined amount of groupings. 
+
+The results we are focusing on are finding emerging industries and employment trends by industry. We also go deeper into emerging industries by looking at a yearly change in job growth.
 
 
 \section{Results and Discussion}
@@ -137,8 +139,30 @@ The trained model was able to come very close to the actual label values for eac
 \subsection{Neural Network}
 \label{ssec:nnResult}
 
-\subsection{Cluster}
+\subsection{Clustering}
 \label{ssec:clusterResult}
+
+Firstly, we examined job growth by industry to see which industries were growing the fastest in our data set. After getting a better understanding of the data through visualizations the next step was to look at the yearly changes of job gains by each industry. 
+
+\begin{figure}[h]
+	\includegraphics[width=\linewidth]{"./pictures/emerging_jobs"}
+	\caption{Growing Industries}
+	\label{fig:Job Growth}
+\end{figure}
+
+\begin{figure}[h]
+	\includegraphics[width=\linewidth]{"./pictures/yearwise emerging sectors"}
+	\caption{Industry Trends by Year}
+	\label{fig:Yearly Growth}
+\end{figure}
+
+We can see that many industries seemed to have a steady decline or growth over the years. While there were industries such as leisure and hospitality that had a checkered growth.  
+
+\begin{figure}[h]
+	\includegraphics[width=\linewidth]{"./pictures/industry employment trend"}
+	\caption{Industry Trends by Year}
+	\label{fig:Yearly Growth}
+\end{figure}
 
 \section{Conclusion}
 
