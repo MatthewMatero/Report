@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.18 (MiKTeX 2.9.6400 64-bit) (preloaded format=pdflatex 2017.10.23)  17 DEC 2017 10:21
+This is pdfTeX, Version 3.14159265-2.6-1.40.18 (MiKTeX 2.9.6400 64-bit) (preloaded format=pdflatex 2017.10.23)  17 DEC 2017 10:25
 entering extended mode
 **./final_report.tex
 (final_report.tex
@@ -309,17 +309,22 @@ Package pdftex.def Info: Requested size: 227.6506pt x 162.60966pt on input line
 
 LaTeX Warning: `h' float specifier changed to `ht'.
 
+
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+ [4 <./pictures/jobloss.png> <./pictures/jobgains.png> <./pictures/DF.png> <./p
+ictures/trend.png> <./pictures/acf.png>]
 LaTeX Font Info:    Try loading font information for OMS+ptm on input line 216.
+
 
 ("C:\Program Files\MiKTeX 2.9\tex\latex\psnfss\omsptm.fd"
 File: omsptm.fd 
 )
 LaTeX Font Info:    Font shape `OMS/ptm/m/n' in size <10.95> not available
 (Font)              Font shape `OMS/cmsy/m/n' tried instead on input line 216.
- [4 <./pictures/jobloss.png> <./pictures/jobgains.png> <./pictures/DF.png> <./p
-ictures/trend.png> <./pictures/acf.png>] (final_report.bbl) [5 <./pictures/ARIM
-A.png> <./pictures/emerging_jobs.png> <./pictures/yearwise emerging sectors.png
->] (final_report.aux)
+ (final_report.bbl)
+[5 <./pictures/ARIMA.png> <./pictures/emerging_jobs.png> <./pictures/yearwise e
+merging sectors.png>] (final_report.aux)
 
 LaTeX Warning: There were multiply-defined labels.
 
@@ -337,7 +342,7 @@ Here is how much of TeX's memory you used:
 X 2.9/fonts/enc/dvips/base/8r.enc}<C:/Program Files/MiKTeX 2.9/fonts/type1/publ
 ic/amsfonts/cm/cmsy10.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/urw/times/ut
 mb8a.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/urw/times/utmr8a.pfb>
-Output written on final_report.pdf (5 pages, 744802 bytes).
+Output written on final_report.pdf (5 pages, 744778 bytes).
 PDF statistics:
  56 PDF objects out of 1000 (max. 8388607)
  0 named destinations out of 1000 (max. 500000)
