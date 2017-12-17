@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.18 (MiKTeX 2.9.6400 64-bit) (preloaded format=pdflatex 2017.10.23)  16 DEC 2017 13:05
+This is pdfTeX, Version 3.14159265-2.6-1.40.18 (MiKTeX 2.9.6400 64-bit) (preloaded format=pdflatex 2017.10.23)  16 DEC 2017 19:42
 entering extended mode
 **./final_report.tex
 (final_report.tex
@@ -187,62 +187,68 @@ Underfull \hbox (badness 1895) in paragraph at lines 85--86
 \OT1/ptm/m/n/10.95 Python/PySpark run-ning on a 3 ma-chine clus-
  []
 
-
-Underfull \vbox (badness 2269) has occurred while \output is active []
-
-<"./pictures/Mse_Score_Predictions".png, id=7, 439.6425pt x 335.2525pt>
+<"./pictures/Correlation_Matrix".png, id=7, 924.45375pt x 684.5575pt>
+File: "./pictures/Correlation_Matrix".png Graphic file (type png)
+<use "./pictures/Correlation_Matrix".png>
+Package pdftex.def Info: "./pictures/Correlation_Matrix".png  used on input lin
+e 94. on input line 94.
+Package pdftex.def Info: Requested size: 227.6506pt x 168.56935pt on input line
+ 94.
+LaTeX Font Info:    Font shape `OT1/ptm/bx/n' in size <9> not available
+(Font)              Font shape `OT1/ptm/b/n' tried instead on input line 95.
+<"./pictures/MaleVsFemaleUnemployment".png, id=9, 1003.75pt x 563.10374pt>
+File: "./pictures/MaleVsFemaleUnemployment".png Graphic file (type png)
+<use "./pictures/MaleVsFemaleUnemployment".png>
+Package pdftex.def Info: "./pictures/MaleVsFemaleUnemployment".png  used on inp
+ut line 103. on input line 103.
+Package pdftex.def Info: Requested size: 227.6506pt x 127.70676pt on input line
+ 103.
+[2 <./pictures/Correlation_Matrix.png> <./pictures/MaleVsFemaleUnemployment.png
+>]
+<"./pictures/Mse_Score_Predictions".png, id=15, 439.6425pt x 335.2525pt>
 File: "./pictures/Mse_Score_Predictions".png Graphic file (type png)
 <use "./pictures/Mse_Score_Predictions".png>
 Package pdftex.def Info: "./pictures/Mse_Score_Predictions".png  used on input 
-line 108. on input line 108.
+line 126. on input line 126.
 Package pdftex.def Info: Requested size: 227.6506pt x 173.59566pt on input line
- 108.
-
-Overfull \hbox (5.7268pt too wide) in paragraph at lines 107--109
-[]\OT1/ptm/m/n/10.95 ' [] 
- []
-
-<"./pictures/Correlation_With_Poverty".png, id=9, 801.99625pt x 552.0625pt>
+ 126.
+<"./pictures/Correlation_With_Poverty".png, id=16, 801.99625pt x 552.0625pt>
 File: "./pictures/Correlation_With_Poverty".png Graphic file (type png)
 <use "./pictures/Correlation_With_Poverty".png>
 Package pdftex.def Info: "./pictures/Correlation_With_Poverty".png  used on inp
-ut line 114. on input line 114.
+ut line 132. on input line 132.
 Package pdftex.def Info: Requested size: 227.6506pt x 156.69923pt on input line
- 114.
+ 132.
 
-Overfull \hbox (5.7268pt too wide) in paragraph at lines 113--115
-[]\OT1/ptm/m/n/10.95 ' [] 
- []
+Underfull \vbox (badness 10000) has occurred while \output is active []
 
-[2 <./pictures/Mse_Score_Predictions.png> <./pictures/Correlation_With_Poverty.
-png>]
-LaTeX Font Info:    Try loading font information for OMS+ptm on input line 128.
+LaTeX Font Info:    Try loading font information for OMS+ptm on input line 148.
 
- ("C:\Program Files\MiKTeX 2.9\tex\latex\psnfss\omsptm.fd"
+
+("C:\Program Files\MiKTeX 2.9\tex\latex\psnfss\omsptm.fd"
 File: omsptm.fd 
 )
 LaTeX Font Info:    Font shape `OMS/ptm/m/n' in size <10.95> not available
-(Font)              Font shape `OMS/cmsy/m/n' tried instead on input line 128.
-
-(final_report.bbl) [3
-
-] (final_report.aux) )
+(Font)              Font shape `OMS/cmsy/m/n' tried instead on input line 148.
+ (final_report.bbl)
+[3 <./pictures/Mse_Score_Predictions.png> <./pictures/Correlation_With_Poverty.
+png>] (final_report.aux) )
 (\end occurred when \iffalse on line 298 was incomplete) 
 Here is how much of TeX's memory you used:
- 1637 strings out of 493318
- 23622 string characters out of 3139000
- 81462 words of memory out of 3000000
- 5159 multiletter control sequences out of 15000+200000
- 17942 words of font info for 42 fonts, out of 3000000 for 9000
+ 1656 strings out of 493318
+ 24151 string characters out of 3139000
+ 81486 words of memory out of 3000000
+ 5174 multiletter control sequences out of 15000+200000
+ 21153 words of font info for 46 fonts, out of 3000000 for 9000
  1141 hyphenation exceptions out of 8191
- 41i,9n,25p,648b,224s stack positions out of 5000i,500n,10000p,200000b,50000s
+ 41i,9n,25p,648b,237s stack positions out of 5000i,500n,10000p,200000b,50000s
 {C:/Program Files/MiKTe
 X 2.9/fonts/enc/dvips/base/8r.enc}<C:/Program Files/MiKTeX 2.9/fonts/type1/publ
 ic/amsfonts/cm/cmsy10.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/urw/times/ut
 mb8a.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/urw/times/utmr8a.pfb>
-Output written on final_report.pdf (3 pages, 160466 bytes).
+Output written on final_report.pdf (3 pages, 312779 bytes).
 PDF statistics:
- 30 PDF objects out of 1000 (max. 8388607)
+ 34 PDF objects out of 1000 (max. 8388607)
  0 named destinations out of 1000 (max. 500000)
- 11 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 21 words of extra memory for PDF output out of 10000 (max. 10000000)
 
