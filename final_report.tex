@@ -34,7 +34,7 @@
 \maketitle
 
 \begin{abstract}
- With the advancement of computers and applications being able to work with larger sets of data, we are increasingly able to perform more complex analysis. We aim to try and build accurate predictive models of the poverty level across America. First we examine poverty levels through linear models and then compare to deep learning. As well as perform a clustering to compare job markets. 
+ With the advancement of computers and applications being able to work with larger sets of data, we are increasingly able to perform more complex analysis. We aim to try and build accurate predictive models of the poverty level across America. First we examine poverty levels through linear models and then perform a clustering to compare job markets. 
 \end{abstract}
 
 \section{Introduction}
@@ -43,9 +43,7 @@ Our problem arises from the need to accurately know the percentage of people liv
 
 To begin we are going to analyze our dataset using common linear models. With features selected from a mix of the world bank's world development indicators and the bureau of labor statistics, we believe we can not only compete with widely accepted poverty models but add insight into how we can improve them.
 
-We also believe that there is a possibility that using a deep learning recursive neural network may lead to a more precise estimation the nature of the data over time. Although we build this model more for exploratory purposes to see if there is any promise continuing NNs in this area.
-
-Lastly, we explore a clustering around job markets to see which industries seem to hold promise for growth and advancement. 
+Additionally, we explore a clustering around job markets to see which industries seem to hold promise for growth and advancement. 
  
 The application of this work is to improve the lives of the many people still living in poverty. With an accurate prediction we can direct discussion around how we can pro-actively help reduce this number. Our clustering of job markets also aims to help direct people to how they can better their skill set to improve their economic standing. 
 
@@ -56,24 +54,19 @@ These goals are related to not only the well-being of people by trying to amplif
 
 \subsection{Sustainable Development Goal}
 \label{ssec:sdg}
-Our focus is on goal \#1, which is to eradicate extreme poverty by 2030. Specifically one of our main focuses will be on goal 1.2. This aims to reduce the amount of people under the poverty line by 50 percent defined by their national definition. This is the reason we will be monitoring poverty rates with our predictive models. We want to firstly be able to build accurate models, then we can use them to see how close we are to reaching this goal if we continue on our current path. 
+Our focus is on goal \#1, which is to eradicate extreme poverty by 2030. Specifically one of our main focuses will be on goal 1.2. This aims to reduce the amount of people under the poverty line by 50 percent defined by their national definition. This is the reason we will be monitoring poverty rates with our predictive models. We want to firstly be able to build accurate predictions, then we can use them to see how close we are to reaching this goal if we continue on our current path. 
 
 \subsection{Background}
 \label{ssec:background}
 
-As previously mentioned we will be using a combination of linear models and neural networks.
-
-Our clustering approach will be using K-Means. To create clusters around industries
-
-We will be using a RNN. Due to having data over time we feel this may capture a good representation of the data.
-
+As previously mentioned we will be using a combination of linear models and clustering. For linear models we will use multiple linear regression as well as auto-regression due to having time series data. Our clustering approach will be using K-Means, to create clusters around growing industries defined by job openings and expansions.
 
 \subsection{Data}
 \label{ssec:Data}
 
 There were two core data repositories used to create our feature set. The main collection we worked with was compiled of many surveys from the bureau of labor statistics. We supplemented this with a version of the World Bank's World Development Indicators found on Kaggle.com. The total raw size of our available data is roughly 16GB. 
 
-Each survey in the labor statistic set varied from being of the size 10-50MB to a few hundred MB. We planned on originally using the more specific sets for state and county level data, but time constraints only allowed us to work on the national level.
+Each survey in the labor statistic set varied from being of the size 10-50MB to a few hundred MB. With some being at national, state, or county level information. We worked mostly with national level, as well as state.
 
 \section{Methods}
 
@@ -87,7 +80,7 @@ The data files were processed using Python/PySpark running on a 3 machine cluste
 \subsection{Linear Models}
 \label{ssec:lm}
 
-We used Linear Regression to create a model for poverty prediction. With the preprocessing of the data, we arrived at certain feature variables which affect the poverty rates. Some of the features are unemployment percentages, consumer product index, job openings, gains and losses etc. We used the data to calculate the correlation among the features which is shown in figure \ref{fig:Correlation Matrix}
+We used Linear Regression to create a model for poverty prediction. With the preprocessing of data, we arrived at certain feature variables which affect the poverty rates. Some of the features are unemployment percentages, consumer product index, job openings, gains and losses etc. We used the data to calculate the correlation among the features which is shown in figure \ref{fig:Correlation Matrix}
 
 \begin{figure}
 \centering
@@ -110,9 +103,9 @@ To train the model, we divided the data set into training and testing data, and 
 \subsection{Auto regression}
 \label{ssec:autoreg}
 
-We analyzed the data to forecast the Job gains per sector(We determined that to be one of the most influential factor in poverty).We started off by checking for stationarity in the time series i.e.In a stationary time series, the statistical properties over time remains constant and auto co-variance should be time independent.When running a  regression, we expect the observations to be independent of each other ,while in a time series we know that the observations are time dependent. So, to use regression methods on time dependent variables, the data must be stationary. The techniques that apply to independent random variables also apply to stationary random variables.
+We analyzed the data to forecast the Job gains per sector. As we determined that to be one of the most influential factor in poverty. We started off by checking for stationarity in the time series. In a stationary time series, the statistical properties over time remains constant and auto co-variance should be time independent. When running a  regression, we expect the observations to be independent of each other. While in a time series we know that the observations are time dependent. So, to use regression methods on time dependent variables, the data must be stationary. The techniques that apply to independent random variables also apply to stationary ones.
 
-We employed Dickey-Fuller test, a statistical test with the null hypothesis that the time series is non-stationary to understand if the time-series is indeed stationary.We also analyzed the trend and seasonality by applying decomposition on the Job gains data.In the next steps we plotted the auto correlation function(ACF) and partial auto correlation function(PACF) to determine the optimal values for p,d,q for the ARIMA model.And Finally a model was created for each sector based on the quarterly job gain reports for each sector to successfully predict the Job gains in the upcoming quarter.
+We employed Dickey-Fuller test, a statistical test with the null hypothesis that the time series is non-stationary to understand if the time-series is indeed stationary. We also analyzed the trend and seasonality by applying decomposition on the Job gains data. In the next steps we plotted the auto correlation function(ACF) and partial auto correlation function(PACF) to determine the optimal values for p,d,q for the ARIMA model. Finally, a model was created for each sector based on the quarterly job gain reports to successfully predict the Job gains in the upcoming quarter.
 
 \subsection{Clustering}
 \label{ssec:cluster}
@@ -143,7 +136,7 @@ The trained model was able to come very close to the actual label values for eac
 \subsection{Auto regression}
 \label{ssec:autoregResult}
 
-In this section we analyze the most important and correlated feature of poverty that is sector wise job gain.These numbers are normalized with respect to the total employment in the particular sector before modelling. Here is how the gross job loss and job gains figure look for "Information" sector
+In this section we analyze the most important and correlated feature of poverty that is sector wise job gain. These numbers are normalized with respect to the total employment in the particular sector before modeling. Here is how the gross job loss and job gains figure look for the Information sector
 
 \begin{figure}[h]
 	\includegraphics[width=\linewidth]{"./pictures/jobloss"}

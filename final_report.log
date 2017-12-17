@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.18 (MiKTeX 2.9.6400 64-bit) (preloaded format=pdflatex 2017.10.23)  16 DEC 2017 20:58
+This is pdfTeX, Version 3.14159265-2.6-1.40.18 (MiKTeX 2.9.6400 64-bit) (preloaded format=pdflatex 2017.10.23)  17 DEC 2017 10:21
 entering extended mode
 **./final_report.tex
 (final_report.tex
@@ -66,7 +66,11 @@ File: pdftex.def 2017/06/24 v1.0g Graphics/color driver for pdftex
 \Gin@req@height=\dimen106
 \Gin@req@width=\dimen107
 )
-(final_report.aux)
+(final_report.aux
+
+LaTeX Warning: Label `fig:ACF' multiply defined.
+
+)
 \openout1 = `final_report.aux'.
 
 LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 32.
@@ -166,103 +170,176 @@ File: ulasy.fd 1998/08/17 v2.2e LaTeX symbol font definitions
 )
 LaTeX Font Info:    Font shape `OT1/ptm/bx/n' in size <12> not available
 (Font)              Font shape `OT1/ptm/b/n' tried instead on input line 34.
+
+Underfull \hbox (badness 1596) in paragraph at lines 46--47
+[]\OT1/ptm/m/n/10.95 Additionally, we ex-plore a clus-ter-ing around
+ []
+
 LaTeX Font Info:    Font shape `OT1/ptm/bx/n' in size <10.95> not available
-(Font)              Font shape `OT1/ptm/b/n' tried instead on input line 57.
- [1{C:/Users/Matt/AppData/Local/MiKTeX/2.9/pdftex/config/pdftex.map}
+(Font)              Font shape `OT1/ptm/b/n' tried instead on input line 55.
+[1{C:/Users/Matt/AppData/Local/MiKTeX/2.9/pdftex/config/pdftex.map}
 
 
 
 ]
-Underfull \hbox (badness 1303) in paragraph at lines 83--84
+Underfull \hbox (badness 1303) in paragraph at lines 76--77
 \OT1/ptm/m/n/10.95 strikes/work stop-pages and CPI. Data from the
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 85--86
+Underfull \hbox (badness 10000) in paragraph at lines 78--79
 []\OT1/ptm/m/n/10.95 The data files were pro-cessed us-ing
  []
 
 
-Underfull \hbox (badness 1895) in paragraph at lines 85--86
+Underfull \hbox (badness 1895) in paragraph at lines 78--79
 \OT1/ptm/m/n/10.95 Python/PySpark run-ning on a 3 ma-chine clus-
  []
 
-<"./pictures/Correlation_Matrix".png, id=7, 924.45375pt x 684.5575pt>
+<"./pictures/Correlation_Matrix".png, id=7, 687.56876pt x 529.98pt>
 File: "./pictures/Correlation_Matrix".png Graphic file (type png)
 <use "./pictures/Correlation_Matrix".png>
 Package pdftex.def Info: "./pictures/Correlation_Matrix".png  used on input lin
-e 94. on input line 94.
-Package pdftex.def Info: Requested size: 227.6506pt x 168.56935pt on input line
- 94.
+e 87. on input line 87.
+Package pdftex.def Info: Requested size: 227.6506pt x 175.4681pt on input line 
+87.
 LaTeX Font Info:    Font shape `OT1/ptm/bx/n' in size <9> not available
-(Font)              Font shape `OT1/ptm/b/n' tried instead on input line 95.
+(Font)              Font shape `OT1/ptm/b/n' tried instead on input line 88.
 <"./pictures/MaleVsFemaleUnemployment".png, id=9, 1003.75pt x 563.10374pt>
 File: "./pictures/MaleVsFemaleUnemployment".png Graphic file (type png)
 <use "./pictures/MaleVsFemaleUnemployment".png>
 Package pdftex.def Info: "./pictures/MaleVsFemaleUnemployment".png  used on inp
-ut line 103. on input line 103.
+ut line 96. on input line 96.
 Package pdftex.def Info: Requested size: 227.6506pt x 127.70676pt on input line
- 103.
+ 96.
 [2 <./pictures/Correlation_Matrix.png> <./pictures/MaleVsFemaleUnemployment.png
 >]
 <"./pictures/Mse_Score_Predictions".png, id=15, 439.6425pt x 335.2525pt>
 File: "./pictures/Mse_Score_Predictions".png Graphic file (type png)
 <use "./pictures/Mse_Score_Predictions".png>
 Package pdftex.def Info: "./pictures/Mse_Score_Predictions".png  used on input 
-line 128. on input line 128.
+line 125. on input line 125.
 Package pdftex.def Info: Requested size: 227.6506pt x 173.59566pt on input line
- 128.
-<"./pictures/Correlation_With_Poverty".png, id=16, 801.99625pt x 552.0625pt>
+ 125.
+<"./pictures/Correlation_With_Poverty".png, id=16, 873.2625pt x 587.19376pt>
 File: "./pictures/Correlation_With_Poverty".png Graphic file (type png)
 <use "./pictures/Correlation_With_Poverty".png>
 Package pdftex.def Info: "./pictures/Correlation_With_Poverty".png  used on inp
-ut line 134. on input line 134.
-Package pdftex.def Info: Requested size: 227.6506pt x 156.69923pt on input line
- 134.
-<"./pictures/emerging_jobs".png, id=17, 843.15pt x 472.76625pt>
+ut line 131. on input line 131.
+Package pdftex.def Info: Requested size: 227.6506pt x 153.06996pt on input line
+ 131.
+<"./pictures/jobloss".png, id=17, 742.775pt x 229.35687pt>
+File: "./pictures/jobloss".png Graphic file (type png)
+<use "./pictures/jobloss".png>
+Package pdftex.def Info: "./pictures/jobloss".png  used on input line 142. on i
+nput line 142.
+Package pdftex.def Info: Requested size: 227.6506pt x 70.29495pt on input line 
+142.
+
+
+LaTeX Warning: `h' float specifier changed to `ht'.
+
+<"./pictures/jobgains".png, id=18, 739.26187pt x 232.36812pt>
+File: "./pictures/jobgains".png Graphic file (type png)
+<use "./pictures/jobgains".png>
+Package pdftex.def Info: "./pictures/jobgains".png  used on input line 148. on 
+input line 148.
+Package pdftex.def Info: Requested size: 227.6506pt x 71.5547pt on input line 1
+48.
+
+LaTeX Warning: `h' float specifier changed to `ht'.
+
+[3 <./pictures/Mse_Score_Predictions.png> <./pictures/Correlation_With_Poverty.
+png>]
+<"./pictures/DF".png, id=24, 688.5725pt x 326.72063pt>
+File: "./pictures/DF".png Graphic file (type png)
+<use "./pictures/DF".png>
+Package pdftex.def Info: "./pictures/DF".png  used on input line 156. on input 
+line 156.
+Package pdftex.def Info: Requested size: 227.6506pt x 108.01755pt on input line
+ 156.
+<"./pictures/trend".png, id=25, 665.98813pt x 130.4875pt>
+File: "./pictures/trend".png Graphic file (type png)
+<use "./pictures/trend".png>
+Package pdftex.def Info: "./pictures/trend".png  used on input line 164. on inp
+ut line 164.
+Package pdftex.def Info: Requested size: 227.6506pt x 44.6021pt on input line 1
+64.
+
+
+LaTeX Warning: `h' float specifier changed to `ht'.
+
+<"./pictures/acf".png, id=26, 663.47874pt x 144.54pt>
+File: "./pictures/acf".png Graphic file (type png)
+<use "./pictures/acf".png>
+Package pdftex.def Info: "./pictures/acf".png  used on input line 172. on input
+ line 172.
+Package pdftex.def Info: Requested size: 227.6506pt x 49.59286pt on input line 
+172.
+
+LaTeX Warning: `h' float specifier changed to `ht'.
+
+<"./pictures/ARIMA".png, id=27, 623.83063pt x 186.6975pt>
+File: "./pictures/ARIMA".png Graphic file (type png)
+<use "./pictures/ARIMA".png>
+Package pdftex.def Info: "./pictures/ARIMA".png  used on input line 180. on inp
+ut line 180.
+Package pdftex.def Info: Requested size: 227.6506pt x 68.12834pt on input line 
+180.
+
+LaTeX Warning: `h' float specifier changed to `ht'.
+
+<"./pictures/emerging_jobs".png, id=28, 843.15pt x 472.76625pt>
 File: "./pictures/emerging_jobs".png Graphic file (type png)
 <use "./pictures/emerging_jobs".png>
-Package pdftex.def Info: "./pictures/emerging_jobs".png  used on input line 148
-. on input line 148.
+Package pdftex.def Info: "./pictures/emerging_jobs".png  used on input line 194
+. on input line 194.
 Package pdftex.def Info: Requested size: 227.6506pt x 127.64137pt on input line
- 148.
-<"./pictures/yearwise emerging sectors".png, id=18, 702.625pt x 501.875pt>
+ 194.
+
+LaTeX Warning: `h' float specifier changed to `ht'.
+
+<"./pictures/yearwise emerging sectors".png, id=29, 702.625pt x 501.875pt>
 File: "./pictures/yearwise emerging sectors".png Graphic file (type png)
 <use "./pictures/yearwise emerging sectors".png>
 Package pdftex.def Info: "./pictures/yearwise emerging sectors".png  used on in
-put line 154. on input line 154.
+put line 200. on input line 200.
 Package pdftex.def Info: Requested size: 227.6506pt x 162.60966pt on input line
- 154.
- [3 <./pictures/Mse_Score_Predictions.png> <./pictures/Correlation_With_Poverty
-.png> <./pictures/emerging_jobs.png> <./pictures/yearwise emerging sectors.png>
-]
-LaTeX Font Info:    Try loading font information for OMS+ptm on input line 170.
+ 200.
 
- ("C:\Program Files\MiKTeX 2.9\tex\latex\psnfss\omsptm.fd"
+LaTeX Warning: `h' float specifier changed to `ht'.
+
+LaTeX Font Info:    Try loading font information for OMS+ptm on input line 216.
+
+("C:\Program Files\MiKTeX 2.9\tex\latex\psnfss\omsptm.fd"
 File: omsptm.fd 
 )
 LaTeX Font Info:    Font shape `OMS/ptm/m/n' in size <10.95> not available
-(Font)              Font shape `OMS/cmsy/m/n' tried instead on input line 170.
+(Font)              Font shape `OMS/cmsy/m/n' tried instead on input line 216.
+ [4 <./pictures/jobloss.png> <./pictures/jobgains.png> <./pictures/DF.png> <./p
+ictures/trend.png> <./pictures/acf.png>] (final_report.bbl) [5 <./pictures/ARIM
+A.png> <./pictures/emerging_jobs.png> <./pictures/yearwise emerging sectors.png
+>] (final_report.aux)
 
-(final_report.bbl) [4
+LaTeX Warning: There were multiply-defined labels.
 
-] (final_report.aux) )
+ )
 (\end occurred when \iffalse on line 298 was incomplete) 
 Here is how much of TeX's memory you used:
- 1668 strings out of 493318
- 24560 string characters out of 3139000
- 81502 words of memory out of 3000000
- 5184 multiletter control sequences out of 15000+200000
+ 1703 strings out of 493318
+ 25412 string characters out of 3139000
+ 82583 words of memory out of 3000000
+ 5213 multiletter control sequences out of 15000+200000
  21153 words of font info for 46 fonts, out of 3000000 for 9000
  1141 hyphenation exceptions out of 8191
- 41i,9n,25p,648b,237s stack positions out of 5000i,500n,10000p,200000b,50000s
+ 41i,9n,25p,689b,237s stack positions out of 5000i,500n,10000p,200000b,50000s
 {C:/Program Files/MiKTe
 X 2.9/fonts/enc/dvips/base/8r.enc}<C:/Program Files/MiKTeX 2.9/fonts/type1/publ
 ic/amsfonts/cm/cmsy10.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/urw/times/ut
 mb8a.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/urw/times/utmr8a.pfb>
-Output written on final_report.pdf (4 pages, 387090 bytes).
+Output written on final_report.pdf (5 pages, 744802 bytes).
 PDF statistics:
- 41 PDF objects out of 1000 (max. 8388607)
+ 56 PDF objects out of 1000 (max. 8388607)
  0 named destinations out of 1000 (max. 500000)
- 31 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 61 words of extra memory for PDF output out of 10000 (max. 10000000)
 
