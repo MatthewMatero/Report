@@ -105,15 +105,19 @@ After analyzing the data carefully, we see that unemployment rate is highly and 
 \label{fig:MaleVsFemaleUnemployment}
 \end{figure}
 
-To train the model, we divided the dataset into training and testing data, and we repeated the process several number of times with different training and testing points, so that each data observation is used in the training process. We combined the results and took the average of the predictions. The results are shown in section 4.
+To train the model, we divided the data set into training and testing data, and we repeated the process several number of times with different training and testing points, so that each data observation is used in the training process. We combined the results and took the average of the predictions. The results are shown in section 4.
 
-\subsection{Neural Network}
-\label{ssec:nn}
+\subsection{Auto regression}
+\label{ssec:autoreg}
+
+We analyzed the data to forecast the Job gains per sector(We determined that to be one of the most influential factor in poverty).We started off by checking for stationarity in the time series i.e.In a stationary time series, the statistical properties over time remains constant and auto co-variance should be time independent.When running a  regression, we expect the observations to be independent of each other ,while in a time series we know that the observations are time dependent. So, to use regression methods on time dependent variables, the data must be stationary. The techniques that apply to independent random variables also apply to stationary random variables.
+
+We employed Dickey-Fuller test, a statistical test with the null hypothesis that the time series is non-stationary to understand if the time-series is indeed stationary.We also analyzed the trend and seasonality by applying decomposition on the Job gains data.In the next steps we plotted the auto correlation function(ACF) and partial auto correlation function(PACF) to determine the optimal values for p,d,q for the ARIMA model.And Finally a model was created for each sector based on the quarterly job gain reports for each sector to successfully predict the Job gains in the upcoming quarter.
 
 \subsection{Clustering}
 \label{ssec:cluster}
 
-We analyzed the data from multiple perspectives to perform our clusterings. For all of them we used a K-means approach to create a predefined amount of groupings. 
+We analyzed the data from multiple perspectives to perform our clustering. For all of them we used  K-means approach to create a predefined amount of groupings. 
 
 The results we are focusing on are finding emerging industries and employment trends by industry. We also go deeper into emerging industries by looking at a yearly change in job growth.
 
@@ -136,8 +140,57 @@ The trained model was able to come very close to the actual label values for eac
     \label{fig:Feature Correlation}
 \end{figure}
 
-\subsection{Neural Network}
-\label{ssec:nnResult}
+\subsection{Auto regression}
+\label{ssec:autoregResult}
+
+In this section we analyze the most important and correlated feature of poverty that is sector wise job gain.These numbers are normalized with respect to the total employment in the particular sector before modelling.Here is how the gross job loss and job gains figure look for "Information" sector
+
+\begin{figure}[h]
+	\includegraphics[width=\linewidth]{"./pictures/jobloss"}
+	\caption{Quarterly Job loss in Information sector}
+    \label{fig:Job loss figures in Information sector}
+\end{figure}
+
+\begin{figure}[h]
+	\includegraphics[width=\linewidth]{"./pictures/jobgains"}
+	\caption{Quarterly Job Gains in Information sector}
+    \label{fig:Job Gains in Information sector}
+\end{figure}
+
+Next, we checked for stationarity in the time series by plotting the Rolling mean \& rolling standard deviation along with the original time series. We also performed Dickey-Fuller test to determine the p-value to check if the time series is stationary.
+
+\begin{figure}[h]
+	\includegraphics[width=\linewidth]{"./pictures/DF"}
+	\caption{Job Gains with rolling mean and standard deviation}
+    \label{fig:Dickey-Fuller on Job gains}
+\end{figure}
+
+The p-value computed was well within the 5\% significance we were testing for,So, the series is indeed stationary And we proceed with the decomposition of the data for analyzing the trend and seasonality in it.
+
+\begin{figure}[h]
+	\includegraphics[width=\linewidth]{"./pictures/trend"}
+	\caption{Trend from time series by decomposition}
+    \label{fig:Trend in job gains}
+\end{figure}
+
+The trend shows a relative drop in the job gains in the recent years in the Information sector (normalized with total population in that sector). We determined the auto correlation and the partial auto correlation to determine the optimal parameters for ARIMA model
+
+\begin{figure}[h]
+	\includegraphics[width=\linewidth]{"./pictures/acf"}
+	\caption{ACF and PACF}
+    \label{fig:ACF}
+\end{figure}
+
+By looking at the ACF and PACF, the model parameters were initially set to (4,1,4), but later changed to (4,1,2) due to non-convergence
+
+\begin{figure}[h]
+	\includegraphics[width=\linewidth]{"./pictures/ARIMA"}
+	\caption{Auto reg model}
+    \label{fig:ACF}
+\end{figure}
+
+This process was followed for each of the sector using spark. The forecast accuracy result was aggregated from the model in the action step.
+
 
 \subsection{Clustering}
 \label{ssec:clusterResult}
@@ -169,7 +222,7 @@ Distribution of work:
 \begin{itemize}
 	\item {Matt - Data Processing/Feature Generation}
 	\item {Kiran - Linear Modeling + Visualizations}
-	\item {Dibya - Neural Network + Visualizations}
+	\item {Dibya - Auto Regression + Visualizations}
 	\item {Neha - Kmeans Cluster}
 \end{itemize}
 
